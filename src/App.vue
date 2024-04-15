@@ -1,5 +1,5 @@
 <script setup>
-  import Hooks from "./components/Hooks.vue"
+  import Pokedex from "./components/Pokedex.vue"
 </script>
 
 <template>
@@ -8,7 +8,7 @@
   </header>
 
   <main>
-    <Hooks></Hooks>
+    <Pokedex></Pokedex>
   </main>
 </template>
 
