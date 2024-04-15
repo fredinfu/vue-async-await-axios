@@ -1,6 +1,17 @@
-# vue-lifecycle
+# vue-async-await-axios
 
-This template should help get you started developing with Vue 3 in Vite.
+## Métodos async/await:
+Simplifica la escritura y el manejo de código asíncrono. 
+
+## Se usa para declarar que una función retorna una promesa 
+```sh
+async
+```
+
+Se usa para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
+```sh
+await
+```
 
 ## Recommended IDE Setup
 
