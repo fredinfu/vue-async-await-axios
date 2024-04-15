@@ -12,14 +12,12 @@ Se usa para esperar a que una promesa se resuelva antes de proceder con la ejecu
 ```sh
 await
 ```
+## Axios
+Axios es una librería JavaScript que se utiliza para realizar peticiones HTTP desde el navegador o desde Node.js.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```sh
+const response = await axios.get(url);
+```
 
 ## Project Setup
 
