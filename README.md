@@ -15,6 +15,13 @@ await
 ## Axios
 Axios es una librería JavaScript que se utiliza para realizar peticiones HTTP desde el navegador o desde Node.js.
 
+## Instalar dependencias al proyecto
+Es necesario instalar axios en el proyecto si lo queremos importar. 
+
+```sh
+npm install axios
+```
+
 ```sh
 const response = await axios.get(url);
 ```
