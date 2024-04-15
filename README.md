@@ -23,6 +23,10 @@ npm install axios
 ```
 
 ```sh
+.
+.
+.
+import axios from 'axios';
 const response = await axios.get(url);
 ```
 
