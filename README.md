@@ -3,28 +3,29 @@
 ## Métodos async/await:
 Simplifica la escritura y el manejo de código asíncrono sin tener que caer en callbacks anidados o un encadenamiento de promesas.
 
+Ejemplo de codigo lleno de callbacks, conocido entre las comunidades de desarrollo como callback hell. 
 ```js
-function doSomething(callback) {
+function loadConfig(callback) {
   // some async task
   callback(null, result);
 }
-function doSomethingElse(result, callback) {
+function loadPokemonTrainer(result, callback) {
   // another async task
   callback(null, anotherResult);
 }
-function doFinalThing(anotherResult, callback) {
+function loadPokemonTeam(anotherResult, callback) {
   // final async task
   callback(null, finalResult);
 }
-doSomething((error, result) => {
+loadConfig((error, result) => {
   if (error) {
     // handle error
   } else {
-    doSomethingElse(result, (error, anotherResult) => {
+    loadPokemonTrainer(result, (error, anotherResult) => {
       if (error) {
         // handle error
       } else {
-        doFinalThing(anotherResult, (error, finalResult) => {
+        loadPokemonTeam(anotherResult, (error, finalResult) => {
           if (error) {
             // handle error
           } else {
@@ -36,9 +37,33 @@ doSomething((error, result) => {
   }
 });  
 ```
+Ejemplo utilizando promesas con async await
 
-![image](https://github.com/fredinfu/vue-async-await-axios/assets/23424560/ee46c789-22db-4865-b0d7-03aaedb4d1a4)
-
+```js
+async function loadConfig() {
+  // some async task
+  return result;
+}
+async function loadPokemonTrainer(result) {
+  // another async task
+  return anotherResult;
+}
+async function loadPokemonTeam(anotherResult) {
+  // final async task
+  return finalResult;
+}
+async function main() {
+  try {
+    const result = await loadConfig(); // call the first function
+    const anotherResult = await loadPokemonTrainer(result); // call the second function
+    const finalResult = await loadPokemonTeam(anotherResult); // call the final function
+    // do something with final result
+  } catch (error) {
+    // handle any error
+  }
+}
+main();     
+```
 
 ## Se usa para declarar que una función retorna una promesa 
 ```sh
