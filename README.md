@@ -70,7 +70,7 @@ main();
 async loadPokemonTeam(a){//load array of pokemon}
 ```
 
-Se usa AWAIT para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
+## Se usa AWAIT para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
 ```js
 async accessChampionLeague() {
   const result = await loadGymBadges(); // loads user Gym Badges when user is
