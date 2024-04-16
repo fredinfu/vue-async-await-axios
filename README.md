@@ -3,6 +3,40 @@
 ## Métodos async/await:
 Simplifica la escritura y el manejo de código asíncrono sin tener que caer en callbacks anidados o un encadenamiento de promesas.
 
+```js
+function doSomething(callback) {
+  // some async task
+  callback(null, result);
+}
+function doSomethingElse(result, callback) {
+  // another async task
+  callback(null, anotherResult);
+}
+function doFinalThing(anotherResult, callback) {
+  // final async task
+  callback(null, finalResult);
+}
+doSomething((error, result) => {
+  if (error) {
+    // handle error
+  } else {
+    doSomethingElse(result, (error, anotherResult) => {
+      if (error) {
+        // handle error
+      } else {
+        doFinalThing(anotherResult, (error, finalResult) => {
+          if (error) {
+            // handle error
+          } else {
+            // do something with final result
+          }
+        });
+      }
+    });
+  }
+});  
+```
+
 ![image](https://github.com/fredinfu/vue-async-await-axios/assets/23424560/ee46c789-22db-4865-b0d7-03aaedb4d1a4)
 
 
