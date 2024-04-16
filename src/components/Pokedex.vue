@@ -54,7 +54,7 @@
                 }
                 
             },
-            axios() {
+            axios() { //Axios se utiliza con callbacks
                 const img = document.getElementById("pokemonSprite");
                 const url = "https://pokeapi.co/api/v2/pokemon/"+this.pokemon.name.toLowerCase();
                 console.log(url);
@@ -63,8 +63,8 @@
                     img.src = response.data.sprites.front_default;
                     img.style.display = "block"
                 });
-            },
-            async axiosAsync() {
+            }, 
+            async axiosAsync() { //Axios se utiliza en una funcion asincrona donde hace await cuando llama a la funcion get
                 try {
                     const img = document.getElementById("pokemonSpriteBack");
                     const url = "https://pokeapi.co/api/v2/pokemon/"+this.pokemon.name.toLowerCase();
