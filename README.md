@@ -65,14 +65,16 @@ async function main() {
 main();     
 ```
 
-## Se usa para declarar que una función retorna una promesa 
-```sh
-async
+## Se usa ASYNC para declarar que una función retorna una promesa 
+```js
+async loadPokemonTeam(a){//load array of pokemon}
 ```
 
-Se usa para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
-```sh
-await
+Se usa AWAIT para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
+```js
+async accessChampionLeague() {
+  const result = await loadGymBadges(); // loads user Gym Badges when user is
+}
 ```
 
 ## Axios
