@@ -65,31 +65,31 @@ async function main() {
 main();     
 ```
 
-## Se usa ASYNC para declarar que una función retorna una promesa 
+### Se usa ASYNC para declarar que una función retorna una promesa 
 ```js
 async loadPokemonTeam(a){//load array of pokemon}
 ```
 
-## Se usa AWAIT para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
+### Se usa AWAIT para esperar a que una promesa se resuelva antes de proceder con la ejecución del código.
 ```js
 async accessChampionLeague() {
   const result = await loadGymBadges(); // loads user Gym Badges when user is
 }
 ```
 
-## Axios
+# Axios
 Axios es una librería JavaScript que se utiliza para realizar peticiones HTTP desde el navegador o desde Node.js.
 
-## Ejemplo Axios 
+### Ejemplo Axios 
 
 ![image](https://github.com/fredinfu/vue-async-await-axios/assets/23424560/2cafb6ce-2b05-461f-940c-1bc1de5a0801)
 
-## Ejemplo Axios Asyncrono
+### Ejemplo Axios Asyncrono
 
 ![image](https://github.com/fredinfu/vue-async-await-axios/assets/23424560/5838e6ce-e795-4dc0-9f93-c18d4ed28590)
 
 
-## Instalar dependencias al proyecto
+### Instalar dependencias al proyecto
 Es necesario instalar axios en el proyecto si lo queremos importar. 
 
 ```sh
